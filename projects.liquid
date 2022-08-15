@@ -1,0 +1,51 @@
+---
+layout: default
+eleventyNavigation:
+    key: "Projects"
+    order: 1
+---
+<div class="row">
+    <div class="cols-md-8">
+        <h2>Current Projects</h2>
+    </div>
+</div>
+<div class="row row-cols-3 row-cols-md-4 g-4">
+    {% for project in collections.projects %}
+        {% if project.data.active %}
+    <div class="col">
+        <div class="card project_card">
+            <img class="card-img-top" src="{{ project.data.image }}" alt="{{ project.data.image_alt }}">
+            <div class="card-body bg-dark">
+                <h5 class="card-title">
+                    <a class="off" href="{{ project.url }}">{{ project.data.title }}</a>
+                </h5>
+                <p class="card-text">{{ project.data.summary_text }}</p>
+            </div>
+        </div>
+    </div>
+        {% endif %}
+    {% endfor %}
+</div>
+<div class="bigspacer"></div>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Past Projects</h2>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for project in collections.projects %}
+        {% if project.data.active != true %}
+            <div class="col">
+                <div class="card project_card">
+                    <img class="card-img-top" src="{{ project.data.image }}" alt="{{ project.data.image_alt }}">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title">
+                            <a class="off" href="{{ project.url }}">{{ project.data.title }}</a>
+                        </h5>
+                        <p class="card-text">{{ project.data.summary_text }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

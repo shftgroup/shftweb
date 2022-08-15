@@ -1,0 +1,69 @@
+---
+layout: default
+title: "Team"
+description: "People in the lab"
+eleventyNavigation:
+    key: Team
+    order: 2
+---
+<h1>Current Members</h1>
+<div class="bigspacer"></div>
+{% assign current_team = collections.current_members %}
+{% assign member_index = 0 %}
+{%  for member in current_team reversed %}
+    {% assign member_index = member_index | plus: 1 %}
+    {% assign col_index = member_index | modulo: 3 %}
+    {% if col_index == 1 %}
+        <div class="row">
+    {% endif %}
+    <div class="col-md-4 member-box">
+        <div class="d-flex">
+            <a class="float-start" href="{{ member.url }}">
+                <img class="member-photo" src="{{ member.data.image }}">
+            </a>
+            <div class="member-info">
+                <div class="head member-name">
+                    <a href="{{ member.url }}" class="off">{{ member.data.title }}</a>
+                </div>
+                <p class="note">{{ member.data.position }}</p>
+            </div>
+        </div>
+    </div>
+
+    {% if col_index == 0 %}
+        </div><div class="bigspacer"></div>
+    {% endif %}
+{%  endfor %}
+{% if col_index != 0 %}
+</div><div class="bigspacer"></div>
+{% endif %}
+<h1>Alumni</h1>
+{% assign current_team = collections.alumni %}
+{% assign member_index = 0 %}
+{%  for member in current_team reversed %}
+    {% assign member_index = member_index | plus: 1 %}
+    {% assign col_index = member_index | modulo: 3 %}
+    {% if col_index == 1 %}
+        <div class="row">
+    {% endif %}
+    <div class="col-md-4 member-box">
+        <div class="d-flex">
+            <a class="float-start" href="{{ member.url }}">
+                <img class="member-photo" src="{{ member.data.image }}">
+            </a>
+            <div class="member-info">
+                <div class="head member-name">
+                    <a href="{{ member.url }}" class="off">{{ member.data.title }}</a>
+                </div>
+                <p class="note">{{ member.data.position }}</p>
+            </div>
+        </div>
+    </div>
+
+    {% if col_index == 0 %}
+        </div><div class="bigspacer"></div>
+    {% endif %}
+{%  endfor %}
+{% if col_index != 0 %}
+    </div><div class="bigspacer"></div>
+{% endif %}

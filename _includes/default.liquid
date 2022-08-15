@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Bootstrap CSS Import -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Custom fonts and icons via Font Awesome, http://fortawesome.github.io/Font-Awesome/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
+    <!-- Fonts via Google -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700' rel='stylesheet' type='text/css'/>
+
+    <!-- Math via MathJax -->
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  </head>
+
+  <body class="d-flex flex-column h-100">
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/assets/images/logo/shft_site_logo.svg" style="width: 35px; height: 35px;">
+          </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            {% if category != "home" %}
+              <li class="nav-item">
+                <a class="nav-link active" href="/">Home</a>
+              </li>
+            {% endif %}
+            {% assign nav_pages = collections.all | eleventyNavigation %}
+            {% for nav_page in nav_pages %}
+              <li class="nav-item">
+                <a class="nav-link active" href="{{ nav_page.url }}">{{ nav_page.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main class="flex-shrink-0">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+<footer>
+    <nav class="navbar navbar-expand-md fixed-bottom bg-light">
+    <div class="container">
+      <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mb-2 me-auto mb-md-2">
+        <li class="nav-item"><a class="nav-link" href="{{ site.department.url }}">{{ site.department.name }}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ site.institution.url }}">{{ site.institution.name }}</a></li>
+      </ul>
+        <ul class="navbar-nav">
+          <li><a class="nav-link" href="/about.html#purpose">About</a></li>
+          <li><a class="nav-link" href="/about.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+</footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </body>
+
+
+</html>

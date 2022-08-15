@@ -1,0 +1,167 @@
+---
+layout: default
+---
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            {% if image %}
+            <img class="float-start pad-right publication_large_image" src="{{ image }}"/>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="titlebox">
+            <div class="title">
+                {% if preprint %}
+                <div class="smallhead">
+                    PREPRINT (not yet peer-reviewed)
+                </div>
+                {% endif %}
+                {{ title }}
+            </div>
+            {%  if subtitle %}
+            <div class="subtitle">
+                {{ subtitle }}
+            </div>
+            {%  endif %}
+            <div class="smallhead">
+                {{ authors }},
+                {% if journal %}
+                <span class="journal">{{ journal }}</span>
+                {% endif %}
+                {% if volume %}
+                {{ volume }}
+                {% endif %}
+                {% if issue %}
+                {{ issue }}
+                {% endif %}
+                {% if page_range%}
+                :{{ page_range }}
+                {% endif %}
+                ({{ year }}).
+                {% if conference %}
+                Presented at {{ conference }} on {{ presentation_date | date: "%B %d, %Y" }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="bigspacer"></div>
+        <div class="note">
+            {% if pdf or pdf_link or fulltext %}
+            <div class="smallhead subtle">
+                Full text
+            </div>
+            <div class="float-start note">
+                <div class="smallspacer"></div>
+                {% if pdf_link %}
+                    <i class="fa fa-file-pdf-o fa-fw"></i>
+                    {% if preprint %}
+                    <a class="off" href="{{ pdf_link }}">Preprint PDF Link</a>
+                    {% else %}
+                    <a class="off" href="{{ pdf_link }}">PDF Link</a>
+                    {% endif %}
+                    <br/>
+                {% endif %}
+                {% if pdf %}
+                    <i class="fa fa-file-pdf-o fa-fw"></i>
+                    <a class="off" href="{{ pdf }}">PDF</a>
+                    <br/>
+                {% endif %}
+                {% if fulltext %}
+                    <i class="fa fa-external-link fa-fw"></i>
+                    {% if preprint %}
+                    <a class="off" href="{{ fulltext }}">Preprint HTML</a>
+                    {% else %}
+                    <a class="off" href="{{ fulltext }}">HTML</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <div class="bigspacer"></div>
+            {% endif %}
+            {% if supplement %}
+                <div class="smallhead subtle">
+                    Supplement
+                </div>
+                <div class="pad-left note">
+                    <div class="smallspacer"></div>
+                    <i class="fa fa-paperclip fa-fw"></i>
+                    <a class="off" href="{{ supplement }}">{{ supplement | split: '/' | last }}</a>
+                </div>
+                <div class="bigspacer"></div>
+            {% endif %}
+            {% if page.doi %}
+                <div class="smallhead subtle">
+                    DOI
+                </div>
+                <div class="pad-left note">
+                    <div class="smallspacer"></div>
+                    <i class="fa fa-external-link fa-fw"></i>
+                    <a class="off" href="http://dx.doi.org/{{ doi }}">{{ doi }}</a>
+                </div>
+                <div class="bigspacer"></div>
+            {% endif %}
+            {% if github %}
+                <div class="smallhead subtle">
+                    Source code
+                </div>
+                <div class="pad-left note">
+                    <div class="smallspacer"></div>
+                    <i class="fa fa-cog fa-fw"></i>
+                    <a class="off" href="{{ github }}">{{ page.github | remove: 'http://' | remove: 'https://' }}</a>
+                </div>
+                <div class="bigspacer"></div>
+            {% endif %}
+            {% if dryad_doi %}
+                <div class="smallhead subtle">
+                    Data
+                </div>
+                <div class="pad-left note">
+                    <div class="smallspacer"></div>
+                    <i class="fa fa-database fa-fw"></i>
+                    <a class="off" href="http://dx.doi.org/{{ dryad_doi }}">Dryad</a>
+                </div>
+                <div class="bigspacer"></div>
+            {% endif %}
+            {% if figshare_doi %}
+                <div class="smallhead subtle">
+                    Data
+                </div>
+                <div class="pad-left note">
+                    <div class="smallspacer"></div>
+                    <i class="fa fa-database fa-fw"></i>
+                    <a class="off" href="http://doi.org/{{ figshare_doi }}">Figshare</a>
+                </div>
+                <div class="bigspacer"></div>
+            {% endif %}
+            {% if altmetric_id %}
+                <div class="smallhead subtle">
+                    Altmetrics
+                </div>
+                <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+                <div class="altmetric-embed" data-badge-popover="right" data-doi={{ doi }} data-badge-type="donut" data-altmetric-id={{ altmetric_id }} data-hide-no-mentions="true">
+                </div>
+                <div class="bigspacer"></div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="post">
+            {% if embargo %}
+            In process, please return later!
+            {% else %}
+            {{ content }}
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="hugespacer"></div>

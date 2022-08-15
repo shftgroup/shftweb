@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Software"
+eleventyNavigation:
+    key: "Software"
+    order: 6
+---
+
+<div class="bigspacer"></div>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Software and Technical Systems</h2>
+        <p>
+            Below is a descending chronological listing of SHFT member developed software tools and other technical outputs. These may be linked to relevant publications.
+        </p>
+    </div>
+</div>
+{% assign software_index = 0 %}
+{% for software in collections.software %}
+    {% assign software_index = software_index | plus: 1 %}
+    {% assign col_index = software_index | modulo: 3 %}
+    {% if col_index == 1 %} <!-- opening of a new row -->
+        <div class="row">
+    {% endif %}
+    <div class="col-md-4 publication_box">
+        <div class="d-flex">
+            <a class="float-end" href="{{ software.url }}">
+                <img class="publication_image" src="{{ software.data.image }}"/>
+            </a>
+            <div class="publication_info">
+                <div class="smallhead">
+                    <a class="off" href="{{ software.url }}">{{ software.data.title }}</a>
+                </div>
+                <p class="note">{{ software.data.summary }}</p>
+            </div>
+        </div>
+    </div>
+    {% if col_index == 0 %}
+        </div><div class="bigspacer"></div>
+    {% endif %}
+{% endfor %}
+{% if col_index != 0 %}
+    </div><div class="bigspacer"></div>
+{% endif %}
+
+<div class="bigspacer"></div>

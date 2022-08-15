@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% assign previousPost = collections.news | getPreviousCollectionItem: page %}
+{% assign nextPost = collections.news | getNextCollectionItem: page %}
+
+<div class="page-header">
+    <h1>{{ title }} {% if tagline %}<small>{{ tagline }}</small>{% endif %}</h1>
+</div>
+
+<div class="row post-full">
+    <div class="col-xs-12">
+        <div class="date">
+            <span>{{ page.date | date_to_string }}</span>
+        </div>
+        <div>
+            {{ content }}
+        </div>
+
+        <hr>
+        <nav aria-label="News Post Navigation">
+            <ul class="pagination" >
+                {% if previousPost %}
+                    <li class="page-item prev">
+                        <a class="page-link" href="{{ previousPost.url }}">Previous</a></li>
+                    </li>
+                {% else %}
+                    <li class="page-item prev disabled">
+                        <a class="page-link">Previous</a>
+                    </li>
+                {% endif %}
+                {% if nextPost %}
+                    <li class="page-item next">
+                        <a class="page-link" href="{{ nextPost.url }}">Next</a></li>
+                    </li>
+                {% else %}
+                    <li class="page-item next disabled">
+                        <a class="page-link">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+

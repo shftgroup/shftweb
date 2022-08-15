@@ -1,0 +1,75 @@
+---
+layout: default
+title: "Publications"
+description: "Publication and other public dissemination from the lab"
+eleventyNavigation:
+    key: Pubs
+    order: 5
+---
+<div class="bigspacer"></div>
+<div class="row">
+    <div class="col-md-8">
+        <h2>Publications and Outputs</h2>
+        <p>
+            Below is a descending chronological listing of SHFT member non-software system outputs and publications.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="cols-md-8">
+        <h3>Peer Reviewed</h3>
+    </div>
+</div>
+{% assign publication_index = 0 %}
+{% for publication in collections.publications %}
+    {% assign publication_index = publication_index | plus: 1 %}
+    {% assign col_index = publication_index | modulo: 3 %}
+    {% if col_index == 1 %} <!-- opening of a new row -->
+        <div class="row">
+    {% endif %}
+            <div class="col-md-4 publication_box">
+                {% if publication.data.embargo %}
+                <div class="d-flex">
+                    <img class="float-end publication_image" src="{{ publication.data.image }}"/>
+                    <div class="publication_info">
+                        <div class="smallhead">
+                           {{ publication.data.title }}
+                        </div>
+                        <p class="note">{{ publication.data.shortref }}</p>
+                    </div>
+                </div>
+                {% elsif publication.data.preprint %}
+                <div class="d-flex">
+                   <a class="float-start" href="{{ publication.url }}">
+                       <img class="publication_image" src="{{ paper.data.image }}"/>
+                   </a>
+                    <div class="publication_info">
+                        <div class="smallhead">
+                            <a href="{{ publication.url }}" class="off">PREPRINT: {{ publication.data.title }}</a>
+                        </div>
+                        <p class="note">{{ publication.data.shortref }}</p>
+                    </div>
+                </div>
+                {% else %}
+                <div class="d-flex">
+                    <a class="float-start" href="{{ publication.url }}">
+                        <img class="publication_image" src="{{ publication.data.image }}"/>
+                    </a>
+                    <div class="publication_info">
+                        <div class="smallhead">
+                           <a class="off" href="{{ publication.url }}">{{ publication.data.title }}</a>
+                        </div>
+                        <p class="note">{{ publication.data.shortref }}</p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+            {% if col_index == 0 %}
+        </div><div class="bigspacer"></div>
+            {% endif %}
+{% endfor %}
+{% if col_index != 0 %}
+</div><div class="bigspacer"></div>
+{% endif %}
+
+<div class="bigspacer"></div>

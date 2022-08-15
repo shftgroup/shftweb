@@ -1,0 +1,144 @@
+---
+layout: default
+---
+
+{% assign lastname = title | split: ' ' | last %}
+{% for paper in collections.paper %}
+    {% if paper.data.authors contains lastname %}
+        {% assign has_papers = true %}
+    {% endif %}
+{% endfor %}
+
+{% for post in collections.blog %}
+    {% if handle == post.data.author_handle %}
+        {% assign has_posts = true %}
+    {% endif %}
+{% endfor %}
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            {% if image %}
+            <img class="float-start pad-right big-member-photo" src="{{ image }}">
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="float-start pad-right titlebox">
+            <div class="title">
+                {{ title }}
+            </div>
+            <br/>
+            <div class="smallhead">
+                {{ position }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        {% if cv %}
+        <div class="smallhead">
+            CV
+        </div>
+        <div class="pad-left note">
+            <div class="smallspacer"></div>
+            <i class="fa fa-file-text-o fa-fw"></i>
+            <a class="off" href="{{ cv }}">{{ cv | split: "/" | last }}</a>
+        </div>
+        <div class="bigspacer"></div>
+        {% endif %}
+        {% if twitter %}
+            <div class="smallhead">
+                Twitter
+            </div>
+            <div class="pad-left note">
+                <div class="smallspacer"></div>
+                <i class="fa fa-twitter fa-fw"></i>
+                <a class="off" href="https://twitter.com/{{ twitter }}">{{ twitter }}</a>
+            </div>
+            <div class="bigspacer"></div>
+        {% endif %}
+        {% if github %}
+            <div class="smallhead">
+                GitHub
+            </div>
+            <div class="pad-left note">
+                <div class="smallspacer"></div>
+                <i class="fa fa-github-alt fa-fw"></i>
+                <a class="off" href="https://github.com/{{ github }}">{{ github }}</a>
+            </div>
+            <div class="bigspacer"></div>
+        {% endif %}
+        {% if scholar %}
+            <div class="smallhead">
+                Google Scholar
+            </div>
+            <div class="pad-left note">
+                <div class="smallspacer"></div>
+                <i class="fa fa-book fa-fw"></i>
+                <a class="off" href="http://scholar.google.com/citations?user={{ scholar }}">{{ title }}</a>
+            </div>
+            <div class="bigspacer"></div>
+        {% endif %}
+        {% if orcid %}
+            <div class="smallhead">
+                ORCID
+            </div>
+            <div class="pad-left note">
+                <div class="smallspacer"></div>
+                <i class="fa fa-book fa-fw"></i>
+                <a class="off" href="http://www.orcid.org/{{ orcid}}">{{ orcid }}</a>
+            </div>
+            <div class="bigspacer"></div>
+        {% endif %}
+        {% if email %}
+            {% assign emailarray = email | split: '@' %}
+            <div class="smallhead">
+                Email
+            </div>
+            <div class="pad-left note">
+                <div class="smallspacer"></div>
+                <i class="fa fa-inbox fa-fw"></i>
+                {{ emailarray.first }}<span style="display:none">obfuscate</span>@{{ emailarray.last }}
+            </div>
+            <div class="bigspacer"></div>
+        {% endif %}
+    </div>
+    <div class="col-md-8">
+        <div class="post">
+            {{ content }}
+        </div>
+        {% if has_papers %}
+            <div class="bigspacer"></div>
+            <div class="head">Papers</div>
+            <div class="spacer"></div>
+            {% for paper in collections.papers %}
+                {% if paper.authors contains lastname %}
+                    {% if paper.embargo %}
+                        <p>{{ paper.title }}</p>
+                    {% else %}
+                        <p><a class="off" href="{{ paper.url }}">{{ paper.title }}</a></p>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% if has_posts %}
+            <div class="bigspacer"></div>
+            <div class="head">Papers</div>
+            <div class="spacer"></div>
+            {% for post in collections.post %}
+                {% if handle == post.author_handle %}
+                    <p><a class="off" href="{{ post.url }}">{{ post.title }}</a></p>
+                {% endif %}
+            {% endfor %}
+
+        {% endif %}
+    </div>
+    <div class="col-md-1"></div>
+</div>

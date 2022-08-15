@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="page-header">
+    <h1>{{ title }}</h1>
+    {% if subtitle %}
+        <h2>{{ subtitle }}</h2>
+    {% endif %}
+</div>
+
+{% for member in collections.team %}
+    {% if member.handle == author_handle %}
+        {% assign author = member %}
+    {% endif %}
+{% endfor %}
+
+<div class="row post-full">
+    {% if static == false %}
+    <div class="col-md-2">
+        <div class="bigspacer"></div>
+            <div>
+                <div class="smallhead">
+                    {{ page.date | date_to_string }}
+                    {% if author %}
+                        <div class="bigspacer"></div>
+                        by <a class="off" href="{{ author.url }}">{{ author.nickname }}</a>
+                    {% endif %}
+                </div>
+                <div class="bigspacer"></div>
+                <div class="smallhead">
+                    Share
+                </div>
+                <div class="post-sharing">
+                   {%  if twitter_sharing %}
+                    <!-- fa classes are font-awesome prefix -->
+                    <i class="fa fa-twitter fa-fw"></i>
+                    <a class="off" href="https://twitter.com/share?url={{ site.url }}&data-text={{ short_title }}&data-via={{ site.twitter_via }}&data-related={{ author.twitter }}" target="_blank">tweet</a>
+                    {% endif %}
+                </div>
+            </div>
+    </div>
+    {% endif %}
+    <div class="col-md-10">
+        <div class="bigspacer"></div>
+        <div class="note">
+            <div class="content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>

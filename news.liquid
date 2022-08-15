@@ -1,0 +1,61 @@
+---
+layout: default
+title: "News"
+description: "SHFT Affiliated News"
+eleventyNavigation:
+    key: "News"
+    order: 3
+pagination:
+    data: collections.news
+    size: 2
+    alias: news_posts
+    reverse: true
+---
+
+<div class="pager">
+    {% if pagination.href.previous %}
+        <a class="prev" href="{{ pagination.href.previous }}">
+            <i class="fa fa-chevron-left fa-lg"></i>
+        </a>
+    {% endif %}
+    {% if pagination.href.next %}
+        <a class="next" href="{{ pagination.href.next }}">
+            <i class="fa fa-chevron-right fa-lg"></i>
+        </a>
+    {% endif %}
+</div>
+
+{% for post in news_posts %}
+    {% for member in collections.team %}
+        {% if member.data.handle == post.data.author_handle %}
+            {% assign author = member %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="bigspacer"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="head">
+                {{ post.data.title }}
+            </div>
+            <div class="smallnote">
+                {{ post.date | date_to_string }}
+                {%  if author %}
+                    by <a class="off" href="{{ author.url }}">{{ author.data.handle }}</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div style="height:5px;"></div><!-- TODO: Take this and move to CSS -->
+            {% if post.data.image %}
+                <a href="{{ post.url }}"><img src="{{ post.data.image }}"></a>
+            {% endif %}
+            <div class="post">
+                {{ post.templateContent }}
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+{% endfor %}
+
+<div class="bigspacer"></div>

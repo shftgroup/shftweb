@@ -1,0 +1,63 @@
+---
+layout: default
+title: "Blog"
+description: "The SHFT Group blog"
+eleventyNavigation:
+    key: "Blog"
+    order: 4
+pagination:
+    data: collections.posts
+    size: 2
+    alias: blog_posts
+---
+
+<div class="pager">
+    {% if pagination.href.previous %}
+        <a class="prev" href="{{ pagination.href.previous }}">
+            <i class="fa fa-chevron-left fa-lg"></i>
+        </a>
+    {% endif %}
+    {% if pagination.href.next %}
+        <a class="next" href="{{ pagination.href.next }}">
+            <i class="fa fa-chevron-right fa-lg"></i>
+        </a>
+    {% endif %}
+</div>
+
+{%  for post in blog_posts %}
+    {% for member in collections.team %}
+        {%  if member.data.handle == post.data.author_handle %}
+            {% assign author = member %}
+        {%  endif %}
+    {% endfor %}
+
+    <div class="bigspacer"></div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="head">
+                <a class="off" href="{{ post.url }}">{{ post.data.title }}</a>
+            </div>
+            <div class="smallnote">
+                {{ post.date | date_to_string }}
+                {% if author %}
+                by <a class="off" href="{{ author.url }}">{{ author.data.nickname }}</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div style="height:5px;"></div>
+            {% if post.data.image %}
+            <a href="{{ post.url }}">
+            <img class="offset-1" src="{{ post.data.image }}">
+            </a>
+            {% endif %}
+            <div class="post">
+            {{ post.templateContent }}
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+{% endfor %}
+
+<div class="bigspacer"></div>
+

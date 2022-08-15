@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            {%  if image %}
+            <img class="float-start pad-right publication_large_image" src="{{ image }}"/>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="titlebox">
+            <div class="title">
+                {{ title }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="bigspacer"></div>
+        {% if start_year %}
+        <div class="note">
+                <div class="smallhead subtle">
+                    Project Interval
+                </div>
+                <div class="pad-left note">
+                    {{ start_year }} to {% if end_year %} {{ end_year }} {% else %} Current {% endif %}
+                </div>
+            <div class="bigspacer"></div>
+        </div>
+        {% endif %}
+        {% if website %}
+        <div class="note">
+            <div class="smallhead subtle">
+                Website
+            </div>
+            <div class="pad-left note">
+                <a class="off" href="{{ website }}">Link</a>
+            </div>
+            <div class="bigspacer"></div>
+        </div>
+        {% endif %}
+        {% if source %}
+            <div class="note">
+                <div class="smallhead subtle">
+                    Project Source
+                </div>
+                <div class="pad-left note">
+                    <a class="off" href="{{ source }}">Link</a>
+                </div>
+                <div class="bigspacer"></div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="col-md-8">
+        <div class="post">
+            {{ content }}
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="hugespacer"></div>

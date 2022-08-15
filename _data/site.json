@@ -1,0 +1,22 @@
+{
+    "title": "SHFT Group",
+    "tagline": "",
+    "institution":
+    {
+	"url": "http://www.csuci.edu",
+	"name": "California State University Channel Islands"
+    },
+    "department":
+    {
+	"url": "http://cs.csuci.edu",
+	"name": "Computer Science"
+    },
+    "author":
+    {
+	"name": "Eric Kaltman",
+	"email": "eric.kaltman@csuci.edu",
+	"github": "ekaltman",
+	"twitter": "ekaltman"
+    },
+    "url": "https://shft.csuci.edu"
+}

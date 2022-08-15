@@ -1,0 +1,174 @@
+---
+layout: default
+title: Software History Futures and Technologies (SHFT) Group
+category: home
+tags: static
+---
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-12">
+	<div id="carousel_box" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		<div class="carousel-overlay logotitle logobox">
+			{{ title }}
+		</div>
+	  <div class="carousel-indicators">
+	    <button type="button" data-bs-target="#carousel_box" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+	    <button type="button" data-bs-target="#carousel_box" data-bs-slide-to="1" aria-label="Slide 2"></button>
+	    <button type="button" data-bs-target="#carousel_box" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	  </div>
+	  <!-- Carousel items -->
+	  <!-- DAD: this should be dynamically populated. -->
+	  <div class="carousel-inner">
+	    <div class="active carousel-item">
+	    	<img src="/assets/images/carousel/cscw-2021-fig-5.jpg" class="d-block w-100" alt="">
+	    </div>
+	    <div class="carousel-item">
+	    	<img src="/assets/images/carousel/etc-spread.png" class="d-block w-100" alt="">
+	    </div>
+	    <div class="carousel-item">
+	    	<img src="/assets/images/carousel/dhq-doom-window.png" class="d-block w-100" alt="">
+	    </div>
+	  </div>
+	  <!-- Carousel nav -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#carousel_box" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carousel_box" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+	</div>
+</div>
+
+<div class="hugespacer"></div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="smallhead" style="color:white;">
+<p>The Software History Futures and Technologies (SHFT) Group develops tools and methodologies to support the historical preservation of computational software (in all its myriad forms). This includes everything from videogames to research support software to business applications.</p>
+
+<p>We are an interdisciplinary group that makes use of a methods from computer-, information-, library-, and archival science, as well as humanist history and critical theory. The overriding goal is to make the history of software more accessible, explorable and interpretable for scholars, practitioners, and students.</p>
+		</div>
+	</div>
+</div>
+
+<div class="hugespacer"></div>
+
+<div class="row">
+	<div class="col-md-4">
+		<div class="head">
+			<a class="off" href="/news/">News</a>
+		</div>
+		<div class="bigspacer"></div>
+		<div class="feedbox pad-left">
+			{% for news in collections.news reversed limit: 4 %}
+
+				{% for member in collections.members %}
+					{% if member.data.handle == news.data.author_handle %}
+						{% assign author = member %}
+					{% endif %}
+				{% endfor %}
+
+				<div class="note-title">
+					<i class="fa fa-bullhorn fa-fw"></i>
+					<a class="off" href="{{ news.url }}">
+					{{ news.data.title }}
+					</a>
+				</div>
+				<div class="note">
+					{{ news.content }}
+				</div>
+				<div class="smallspacer"></div>
+				<div class="smallnote">
+					Posted
+					{{ news.date | date_to_string }}
+					{% if author %}
+					by <a class="off" href="{{ author.url }}">{{ author.data.nickname }}</a>
+					{% endif %}
+				</div>
+				<div class="spacer"></div>
+				<div class="spacer"></div>
+			{% endfor %}
+		</div>
+		<div class="bigspacer"></div>
+	</div>
+	<div class="col-md-4">
+		<div class="head">
+			<a class="off" href="/blog/">Posts</a>
+		</div>
+		<div class="bigspacer"></div>
+		<div class="feedbox pad-left">
+			{% for post in collections.posts reversed limit:4 %}
+				{% for member in collections.team %}
+					{% if member.data.handle == post.data.author_handle %}
+						{% assign author = member %}
+					{% endif %}
+				{% endfor %}
+				<div class="note-title">
+					<i class="fa fa-comment-o fa-fw"></i>
+					<a class="off" href="{{ post.url }}">
+					{{ post.data.title }}
+					</a>
+				</div>
+				<div class="smallspacer"></div>
+				<div class="smallnote">
+					Posted
+					{{ post.date | date_to_string }}
+					{% if author %}
+					by <a class="off" href="{{ author.url }}">{{ author.data.nickname }}</a>
+					{% endif %}
+				</div>
+				<div class="spacer"></div>
+				<div class="spacer"></div>
+			{% endfor %}
+		</div>
+		<div class="bigspacer"></div>
+	</div>
+	<div class="col-md-4">
+		<div class="head">
+			<a class="off" href="/publications/">Publications
+			</a>
+		</div>
+		<div class="bigspacer"></div>
+		<div class="feedbox pad-left">
+			{% for pub in collections.publications reversed limit:4 %}
+				<div class="note-title">
+					<i class="fa fa-file-text-o fa-fw"></i>
+					{% if pub.data.preprint %}
+					Preprint:
+					<a class="off" href="{{ pub.url }}">
+					{{ pub.data.title }}
+					</a>
+					{% else %}
+					<a class="off" href="{{ pub.url }}">
+					{{ pub.data.title }}
+					</a>
+					{% endif %}
+					<br/>
+					<div class='shortref note'>
+					{{ pub.data.shortref }}
+					</div>
+				</div>
+				<div class="smallspacer"></div>
+				<div class="smallnote">
+					{% if pub.data.preprint %}
+					Posted
+					{% else %}
+					Published
+					{% endif %}
+					{{ pub.date | date_to_string }}
+				</div>
+				<div class="spacer"></div>
+				<div class="spacer"></div>
+			{% endfor %}
+		</div>
+		<div class="bigspacer"></div>
+	</div>
+</div>
+
+<div class="bigspacer"></div>
+

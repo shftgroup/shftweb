@@ -1,0 +1,374 @@
+
+
+$font-size-base: 16px;
+$font-stack:    Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary-color: #FFFFFF;
+$subtle-color: #DCDCDC;
+$accent-color: #DE8D47;
+$base-background-color: #201F1D;
+$font-weight-base: 300;
+$heavy-font-weight: 700;
+
+body {
+	font-size: $font-size-base;
+	font: $font-stack;
+	font-family: $font-stack;
+	font-weight: $font-weight-base;
+	color: $primary-color;
+	background-color: $base-background-color;
+	padding-top: 100px;
+}
+// TODO: May replace body padding-top with a different method if needed
+
+
+// TODO: maybe change these container things
+body > .container {
+	padding-top: 50px; /* to prevent navbar overlap */
+	font-family: $font-stack;
+	color: $primary-color;
+	font-weight: $font-weight-base;
+	padding-bottom: 50px; /* to prevent navbar overlap */
+}
+
+footer {
+	margin-top: 50px;
+}
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+h1, .h1 { font-size: floor($font-size-base * 1.75); } /* ~36px */
+h2, .h2 { font-size: floor($font-size-base * 1.5); } /* ~30px */
+h3, .h3 { font-size: ceil($font-size-base * 1.30); }  /* ~24px */
+h4, .h4 { font-size: ceil($font-size-base * 1.1); }  /* ~18px */
+h5, .h5 { font-size:  $font-size-base; }
+h6, .h6 { font-size: ceil($font-size-base * 0.85); }  /* ~12px */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-stack;
+	font-weight: $heavy-font-weight;
+}
+
+p {
+	font-weight: $font-weight-base;
+}
+
+// TODO: See if this does anything
+.off {
+	color: inherit;
+	text-decoration: none;
+}
+
+// TODO: maybe change the center and text-center classes
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+}
+
+.text-center {
+     text-align: center;
+}
+
+// Spacer Declarations, may find a better way to do this
+
+.hugespacer {
+	height: 50px;
+}
+
+.bigspacer {
+	height: 20px;
+}
+
+.spacer {
+	height: 10px;
+}
+
+.smallspacer {
+	height: 5px;
+}
+
+.pad-right {
+	padding-right: 10px;
+}
+
+.pad-left {
+	padding-left: 10px;
+}
+
+//Member Photo Classes
+
+
+.big-member-photo {
+	max-width: 300px;
+}
+
+.member-photo {
+	height: 20vw;
+	min-height: 100px;
+	max-height: 225px;
+}
+
+.member-name {
+	font-size: ceil($font-size-base*1.2);
+}
+
+.member-box {
+    min-height: 200px;
+}
+
+.member-info {
+	padding-left: 20px;
+}
+
+
+.titlebox {
+	min-width: 300px;
+}
+
+.title {
+	font-size: 45px;
+	line-height: 50px;
+	font-weight: 100;
+}
+
+.subtitle {
+	font-size: 30px;
+	line-height: 30px;
+	color: $subtle-color;
+}
+
+.subtle {
+	color: $subtle-color;
+}
+
+// This @media query only applies to member-name if the width of the site is at most 800px
+// TODO: Not sure if this is needed but will test with smaller screen sizes
+@media all and (max-width: 800) {
+	.member-name {
+		font-size: $font-size-base;
+	}
+}
+
+// Navigation Bar
+
+header .navbar-brand {
+	font-size: 30px;
+	font-weight: $font-weight-base;
+}
+
+header .navbar-nav {
+	font-size: 30px;
+	font-weight: $font-weight-base;
+	a {
+		color: black;
+	}
+}
+
+//Post Pages
+
+.post img {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.post-full .date {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.head {
+	font-size: 26px;
+	font-weight: $font-weight-base;
+	line-height:30px;
+	color: $accent-color;
+}
+
+.smallhead {
+    font-size: 19px;
+    font-weight: $font-weight-base;
+    line-height: 23px;
+	color: $accent-color;
+}
+
+.note {
+    font-size: 15px;
+    font-weight: $font-weight-base;
+    line-height: 18px;
+}
+
+.smallnote {
+    font-size: 15px;
+    font-weight: $font-weight-base;
+    line-height: 16px;
+}
+.note-title {
+	font-weight: $font-weight-base * 2;
+	a {
+		color: $primary-color;
+		border-bottom: none;
+	}
+}
+// Tag Box
+.tag_box {
+  list-style:none;
+  margin:0;
+  overflow:hidden;
+  padding-left:10px;
+}
+
+.tag_box li {
+  line-height:28px;
+}
+
+.tag_box .inline li {
+  float:left;
+}
+
+.tag_box a {
+  text-decoration:none;
+}
+
+.tag_box a span{
+  vertical-align:super;
+  font-size:0.8em;
+}
+
+.feedbox {
+	height: 420px;
+	overflow: hidden;
+	-webkit-mask-image: -webkit-gradient(linear, left 85%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+//Publications Page
+
+.publication_box {
+	min-height: 140px;
+}
+
+.publication_image {
+	width: 100px;
+}
+
+.publication_large_image {
+	width: 100%;
+}
+
+.publication_info {
+	padding-left: 20px;
+}
+
+.journal {
+	font-style: italic;
+}
+
+.shortref {
+	font-style: italic;
+}
+
+//Carousel
+
+.logobox {
+	height: 180px;
+	line-height: 65px;
+	font-weight: $heavy-font-weight;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	text-shadow:-1px 1px #fff,1px 1px #fff,1px -1px #fff, -1px -1px #fff;
+}
+
+.logotitle {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 100;
+	color: black;
+}
+
+@media all and (min-width: 1024px) {
+	.logotitle {
+		font-size: 80px;
+		line-height: 80px;
+	}
+}
+
+.nav-link {
+	color: darkgray;
+}
+
+.carousel-indicators {
+	bottom:0;
+}
+
+.carousel-overlay {
+	position:absolute;
+	z-index:12;
+	top:25%;
+	left:0;
+	width:100%;
+	text-align:center;
+}
+
+//Project Cards
+
+.project_card {
+	max-width: 300px;
+	border: none;
+}
+
+//Pagination
+
+.pager a {
+	position:fixed;
+	top:50%;
+	z-index:101;
+	margin-top:-30px;
+	padding: 10px 5px 30px 5px;
+	height:20px;
+	width:20px;
+	display:block;
+	overflow:hidden;
+	transition:background-color .2s;
+	-moz-transition:background-color .2s;
+	-webkit-transition:background-color .2s;
+	color: #fff;
+}
+
+body.exhibit .pager a {
+	background-color:#fff;
+	box-shadow:rgba(0,0,0,0.25) 0 0 10px;
+}
+
+.pager a.prev {
+	left: 0;
+	border-radius:0 3px 3px 0;
+}
+
+.pager a.next {
+	right:0;
+	border-radius:3px 0 0 3px;
+}
+
+.pager a,
+body.dark .pager a:hover { background-color: darkgray; }
+
+.pager a:hover,
+body.dark .pager a,
+body.exhibit .pager a:hover { background-color: darkgray; }
+
+.pager .icon.prev,
+body.dark .pager a:hover .icon.prev { background-position:-80px -90px; }
+.pager .icon.next,
+body.dark .pager a:hover .icon.next { background-position:-100px -90px; }
+body.dark .pager .icon.prev,
+.pager a:hover .icon.prev { background-position:-80px -70px; }
+body.dark .pager .icon.next,
+.pager a:hover .icon.next { background-position:-100px -70px; }

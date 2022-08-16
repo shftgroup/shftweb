@@ -266,6 +266,13 @@ header .navbar-nav {
 	padding-left: 20px;
 }
 
+.publication_authors {
+	font-style: italic;
+	font-size: 15px;
+	font-weight: $font-weight-base;
+	color: $subtle-color;
+}
+
 .journal {
 	font-style: italic;
 }

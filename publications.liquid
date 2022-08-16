@@ -59,7 +59,10 @@ eleventyNavigation:
                         <div class="smallhead">
                            <a class="off" href="{{ publication.url }}">{{ publication.data.title }}</a>
                         </div>
-                        <p class="note">{{ publication.data.shortref }}</p>
+                        <div class="smallnote">
+                            {{ publication.data.subtitle }}
+                        </div>
+                        <span class="publication_authors">{{ publication.data.shortref }}</span>
                     </div>
                 </div>
                 {% endif %}

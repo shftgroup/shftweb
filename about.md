@@ -18,6 +18,7 @@ The Software History Futures and Technologies (SHFT) Group was founded by Dr. Er
 ## Mailing Address
 Office: Solano Hall Rm 2171<br/>
 Lab: Solano Hall Rm 2166<br/>
+California State University Channel Islands
 1 University Drive<br/>
 Camarillo, CA 93012
 
@@ -34,9 +35,10 @@ shft AT csuci.edu
 
 This website is hosted from CI's data center on a dedicated server controlled by the group. It is a complete rewrite of a fork of D. Allan Drummond's [Drummond Lab], which is itself a fork of Trevor Bedford's [Bedford Lab] site. I used this fork as the base for a full revision of the site. While it was designed to be distributed through Github pages, I am using [Github] to host the site source code and then running my site instance in a local Docker container.
 
-The site uses [Sass] for stylesheets, [Eleventy] for site generation, and [Bootstrap] for reactive design features. The main motivation for using Jekyll is that the website itself is a set of static HTML pages, which are easier to maintain and align with the philosophy of minimal computing. The goal is to spare excessive CPU cycles and unnecessary I/O operations as the site is easily cached and easy to preserve.
+The site uses [Sass] for stylesheets, [Eleventy] for site generation, and [Bootstrap] for reactive design features. 
+The main motivation for using Eleventy is that the website itself is a set of static HTML pages, which are easier to maintain and align with the philosophy of minimal computing. The goal is to spare excessive CPU cycles and unnecessary I/O operations as the site is easily cached and easy to preserve.
 
-In the spirit of my website progenitors, please feel free to make use of this site's source to construct your lab's site.
+In the spirit of my website progenitors, please feel free to make use of [this site's source] to construct your lab's site.
 
 [Bedford Lab]: http://bedford.io
 [Drummond Lab]: http://drummondlab.org/about.html
@@ -44,3 +46,4 @@ In the spirit of my website progenitors, please feel free to make use of this si
 [GitHub]: http://github.com/ekaltman/shftgroup
 [Sass]: http://sass-lang.com/
 [Bootstrap]: https://getbootstrap.com/
+[this site's source]: https://github.com/shftgroup/shftweb

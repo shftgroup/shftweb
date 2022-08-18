@@ -9,6 +9,14 @@ $base-background-color: #201F1D;
 $font-weight-base: 300;
 $heavy-font-weight: 700;
 
+@font-face {
+	font-family: Argentum;
+	src: url("assets/fonts/ArgentumSans-ExtraBold.ttf") format("truetype");
+	font-weight: $heavy-font-weight;
+	font-style: normal;
+}
+
+
 body {
 	font-size: $font-size-base;
 	font: $font-stack;
@@ -297,6 +305,7 @@ header .navbar-nav {
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: 100;
+	font-family: Argentum;
 	color: black;
 }
 

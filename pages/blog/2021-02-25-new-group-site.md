@@ -17,4 +17,6 @@ The site has multiple sections and is completely statically generated, which mea
 
 Our group is currently engaged in a number of different ongoing research projects in software history and preservation. I, Eric, will also use this space to post updates on current projects and other thoughts related to group work. My research associates will also likely post about their work from time to time.
 
-Please check out the about page for more information on the group. 
+Please check out the [about page] for more information on the group. 
+
+[about page]: /about.html

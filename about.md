@@ -1,6 +1,6 @@
 ---
 layout: post.liquid
-title: "About the Group"
+title: ""
 permalink: "/about.html"
 static: true
 ---
@@ -9,7 +9,7 @@ static: true
 
 # Purpose
 
-The Software History Futures and Technologies (SHFT) Group was founded by Dr. Eric Kaltman in 2020 as a unified configuration for his research work and those of his students at California State University Channel Islands (CI). The group's work, due to its interdisciplinary nature, is usually conducted with collaborators at CI and other institutions.
+The Software History Futures and Technologies (SHFT) Group was founded by Dr. Eric Kaltman in 2019 as a unified configuration for his research work and those of his students at California State University Channel Islands (CI). The group's work, due to its interdisciplinary nature, is usually conducted with collaborators at CI and other institutions.
 
 <a name="contact"></a>
 
@@ -18,7 +18,8 @@ The Software History Futures and Technologies (SHFT) Group was founded by Dr. Er
 ## Mailing Address
 Office: Solano Hall Rm 2171<br/>
 Lab: Solano Hall Rm 2166<br/>
-California State University Channel Islands
+
+California State University Channel Islands<br/>
 1 University Drive<br/>
 Camarillo, CA 93012
 

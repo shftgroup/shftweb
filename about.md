@@ -34,7 +34,7 @@ shft AT csuci.edu
 
 # Design and Implementation Of This Site
 
-This website is hosted from CI's data center on a dedicated server controlled by the group. It is a complete rewrite of a fork of D. Allan Drummond's [Drummond Lab], which is itself a fork of Trevor Bedford's [Bedford Lab] site. I used this fork as the base for a full revision of the site. While it was designed to be distributed through Github pages, I am using [Github] to host the site source code and then running my site instance in a local Docker container.
+This website is hosted from CI's data center on a dedicated server controlled by the group. It is a complete rewrite of a fork of D. Allan Drummond's [Drummond Lab], which is itself a fork of Trevor Bedford's [Bedford Lab] site. I used this fork as the base for a full revision of the site.
 
 The site uses [Sass] for stylesheets, [Eleventy] for site generation, and [Bootstrap] for reactive design features. 
 The main motivation for using Eleventy is that the website itself is a set of static HTML pages, which are easier to maintain and align with the philosophy of minimal computing. The goal is to spare excessive CPU cycles and unnecessary I/O operations as the site is easily cached and easy to preserve.

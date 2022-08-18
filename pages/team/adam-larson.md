@@ -14,7 +14,9 @@ Adam Larson is a Computer Science student at [California State University Channe
 
 He worked with [SURF] last year on the Machine-Learning Based Wireless Cybersecurity Monitoring and Penetration Testing Platform. 
 
-Adam contributed to SHFT through the [SURF] 2021 cohort working with the ETC Data Analysis Project. He is currently helping with both the Game Controlled Vocabularies and the SHFT group website update. 
+Adam contributed to SHFT through the [SURF] 2021 cohort working with the ETC Data Analysis Project and the 2022 cohort exploring emulation workflows. 
+
+He is currently helping with both the Game Controlled Vocabularies and the SHFT group website update. 
 
 [California State University Channel Islands]: https://www.csuci.edu
 [SURF]: https://www.csuci.edu/studentresearch/opportunities/surf-summer-research/faculty-projects-descriptions-19.htm

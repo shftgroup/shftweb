@@ -21,7 +21,7 @@ eleventyNavigation:
     </div>
 </div>
 {% assign publication_index = 0 %}
-{% for publication in collections.publications %}
+{% for publication in collections.publications reversed %}
     {% assign publication_index = publication_index | plus: 1 %}
     {% assign col_index = publication_index | modulo: 3 %}
     {% if col_index == 1 %} <!-- opening of a new row -->

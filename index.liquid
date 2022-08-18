@@ -65,7 +65,8 @@ tags: static
 		</div>
 		<div class="bigspacer"></div>
 		<div class="feedbox pad-left">
-			{% for news in collections.news reversed limit: 4 %}
+			{% assign recent_news = collections.news | tail: 4 | reverse %}
+			{% for news in recent_news %}
 
 				{% for member in collections.members %}
 					{% if member.data.handle == news.data.author_handle %}
@@ -102,7 +103,8 @@ tags: static
 		</div>
 		<div class="bigspacer"></div>
 		<div class="feedbox pad-left">
-			{% for post in collections.posts reversed limit:4 %}
+			{% assign recent_posts = collections.posts | tail: 4 | reverse %}
+			{% for post in recent_posts %}
 				{% for member in collections.team %}
 					{% if member.data.handle == post.data.author_handle %}
 						{% assign author = member %}
@@ -135,7 +137,8 @@ tags: static
 		</div>
 		<div class="bigspacer"></div>
 		<div class="feedbox pad-left">
-			{% for pub in collections.publications reversed limit:4 %}
+			{% assign recent_pubs = collections.publications | tail: 4 | reverse %}
+			{% for pub in recent_pubs %}
 				<div class="note-title">
 					<i class="fa fa-file-text-o fa-fw"></i>
 					{% if pub.data.preprint %}

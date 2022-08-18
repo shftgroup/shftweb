@@ -13,7 +13,10 @@ alum: false
 cv: 
 orcid: 
 ---
-Matilda Orona is pursuing a B.S. in Computer Science at [California State University Channel Islands]. She is currently investigating the effects of the Adobe Flash deprecation for online preservation efforts aswell as the implications of regional software deprecation. Before transferring to CSUCI she attened Moorpark College and Stockholm University. 
+Matilda Orona is pursuing a B.S. in Computer Science at [California State University Channel Islands]. 
+She is currently investigating the effects of the Adobe Flash deprecation for online preservation efforts as well as 
+the implications of regional software deprecation. Before transferring to CSUCI she attened Moorpark College 
+and Stockholm University. Matilda is a member of SHFT's 2021-2022 and 2022-2023 HSI-SMART cohorts.
 
 
 [Computer Science Department]: https://compsci.csuci.edu

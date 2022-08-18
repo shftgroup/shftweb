@@ -9,12 +9,12 @@ date: 2022-08-12
 ---
 
 Dr. Larry Masinter, a renowned computer science researcher responsible for some of the 
-earliest integrated graphical user interfaces, has made a $5,000 donation to the SHFT lab.
+earliest integrated graphical user interfaces (among other things), has made a $5,000 donation to the SHFT lab.
 The gift is targeted at supporting student assistants to collaborate with Dr. Masinter's
 Interlisp.org. Interlisp Medley was the first integrated window, mouse, and graphical user
-interface (GUI). It was developed at Xerox PARC in the late 1970s and early 1980s. An emulator
-for the system was developed and then abandoned for nearly 30 years until a team of 
-volunteers, led by Dr. Masinter, resurrected the project. Interlisp.org is a
-501c(3) non-profit devoted to the support and continued development of the Interlisp emulator.
+interface (GUI). Dr. Masinter and a team of volunteers are working on improvements to a emulator for the system and 
+currently have it running for use in web browsers.
+
+Interlisp.org is a 501c(3) non-profit devoted to the support and continued development of the Interlisp emulator.
 Students from CI will help the project migrate to new development environments and organize
 documentation for using the emulated system. 

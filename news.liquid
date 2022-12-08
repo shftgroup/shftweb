@@ -48,7 +48,7 @@ pagination:
         <div class="col-md-8">
             <div style="height:5px;"></div><!-- TODO: Take this and move to CSS -->
             {% if post.data.image %}
-                <a href="{{ post.url }}"><img src="{{ post.data.image }}"></a>
+                <a href="{{ post.url }}"><img class="img-fluid" src="{{ post.data.image }}"></a>
             {% endif %}
             <div class="post">
                 {{ post.templateContent }}

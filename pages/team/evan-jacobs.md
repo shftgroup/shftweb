@@ -6,7 +6,7 @@ handle: evan
 nickname: Evan
 email: evan.jacobs562@myci.csuci.edu
 image: /assets/images/team/evan-jacobs.jpg
-alum: false
+alum: true
 ---
 
 Evan Jacobs is a Senior majoring in [Computer Science] at [California State University Channel Islands] and is graduating in Fall 2022. He is minoring in Mathematics, Cybersecurity and Information Technology. Evan transferred to CI after attending Ventura College and University of California San Diego where he partially completed an Electrical Engineering bachelor's degree. 

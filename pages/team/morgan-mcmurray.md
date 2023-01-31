@@ -9,7 +9,7 @@ twitter:
 github: Morgan-AM
 scholar: 
 image: /assets/images/team/morgan-mcmurray.jpg
-alum: false
+alum: true
 cv: 
 orcid: 
 tags: team

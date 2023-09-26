@@ -7,14 +7,14 @@ nickname: Ron
 email: ronvincent.aspuria278@myci.csuci.edu
 github: RonThe3rd
 image: /assets/images/team/ron_aspuria.jpg
-alum: false 
+alum: true 
 tags: team
 ---
 Ron Vincent Villanueva Aspuria III is a [computer science] major at [California State University Channel Islands]. He attended [Oxnard College] before transferring to CSUCI, earning his Associates in Natural Sciences and Mathematics. 
 
 Ron Vincent has interests in video game development and artifical intelligence, and has worked in web-development. For more information, see his [linkedin].
 
-As his first year as a SHFT researcher, he is contributing to the documentation and testing of Interlisp.org.
+In his year as a SHFT researcher in 2022-2023, he contributed to the documentation and testing of Interlisp.org.
 
 
 

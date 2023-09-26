@@ -7,7 +7,7 @@ nickname: Dale
 email: dale.reilley996@myci.csuci.edu
 github: MrReilley
 image: /assets/images/team/dale-reilley.jpg
-alum: 
+alum: false
 tags: team
 ---
 Dale Reilley is a [Computer Science] major at [California State University Channel Islands], with an expected graduation in Fall 2024. This is his first year as a student researcher.

@@ -1,11 +1,11 @@
 ---
 layout: news-post
-title: "Emulation Workflows Paper Accepted for iPRES 2023"
+title: "Emulation Workflows Paper Nominated at iPRES 2023"
 author: "Eric Kaltman"
 author_handle: eric
 image: /assets/images/news/ipres-2023-logo.png
 tags: news
-date: 2023-05-31
+date: 2023-09-22
 ---
 
 Our paper "Tacit Processes: Qualitative Analysis Toward Bottom-Up Emulation Workflows" was nominated for the Anna Dappert

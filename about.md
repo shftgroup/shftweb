@@ -9,32 +9,30 @@ static: true
 
 # Purpose
 
-The Software History Futures and Technologies (SHFT) Group was founded by Dr. Eric Kaltman in 2019 as a unified configuration for his research work and those of his students at California State University Channel Islands (CI). The group's work, due to its interdisciplinary nature, is usually conducted with collaborators at CI and other institutions.
+The Software History Futures and Technologies (SHFT) Group was founded by Dr. Eric Kaltman in 2019 at California State University Channel Islands as a unified configuration for his research work and those of his students. The group moved to the University of Alberta in 2024 and frequently collaborates across institutional and disciplinary boundaries.
 
 <a name="contact"></a>
 
 # Contact
 
 ## Mailing Address
-Office: Solano Hall Rm 2171<br/>
-Lab: Solano Hall Rm 2166<br/>
+Office: Old Arts Rm 406 C<br/>
+Lab: Old Arts Rm 104<br/>
 
-California State University Channel Islands<br/>
-1 University Drive<br/>
-Camarillo, CA 93012
+Media and Technology Studies<br/>
+University of Alberta<br/>
+Edmonton, AB, Canada T6G 1C9<br/>
 
-On the official CSUCI [map] the group is located in Solano Hall. The lab space is located across the hall from Dr. Kaltman's office.
-
-[map]: http://maps.csuci.edu/?id=502#!m/189857
-
+<!--
 ## Email Address
-shft AT csuci.edu
+shft AT ualberta.ca 
+-->
 
 <a name="design"></a>
 
 # Design and Implementation Of This Site
 
-This website is hosted from CI's data center on a dedicated server controlled by the group. It is a complete rewrite of a fork of D. Allan Drummond's [Drummond Lab], which is itself a fork of Trevor Bedford's [Bedford Lab] site. I used this fork as the base for a full revision of the site.
+This website is a complete rewrite of a fork of D. Allan Drummond's [Drummond Lab], which is itself a fork of Trevor Bedford's [Bedford Lab] site. I used this fork as the base for a full revision of the site.
 
 The site uses [Sass] for stylesheets, [Eleventy] for site generation, and [Bootstrap] for reactive design features. 
 The main motivation for using Eleventy is that the website itself is a set of static HTML pages, which are easier to maintain and align with the philosophy of minimal computing. The goal is to spare excessive CPU cycles and unnecessary I/O operations as the site is easily cached and easy to preserve.

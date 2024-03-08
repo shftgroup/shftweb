@@ -7,7 +7,7 @@ nickname: Anton
 email: antonsalah47@gmail.com
 github: antonsalah
 image: /assets/images/team/anton-salah.jpg
-alum: false
+alum: true 
 tags: team
 ---
 Anton Salah is a Computer Science student studying at [California State University Channel Islands], currently in his first year as a student researcher.

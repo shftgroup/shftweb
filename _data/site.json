@@ -3,20 +3,20 @@
     "tagline": "",
     "institution":
     {
-	"url": "http://www.csuci.edu",
-	"name": "California State University Channel Islands"
+	"url": "http://www.ualberta.ca",
+	"name": "University of Alberta"
     },
     "department":
     {
-	"url": "http://cs.csuci.edu",
-	"name": "Computer Science"
+	"url": "https://www.ualberta.ca/media-technology-studies/index.html",
+	"name": "Media and Technology Studies"
     },
     "author":
     {
 	"name": "Eric Kaltman",
-	"email": "eric.kaltman@csuci.edu",
+	"email": "kaltman@ualberta.ca",
 	"github": "ekaltman",
 	"twitter": "ekaltman"
     },
-    "url": "https://shft.csuci.edu"
+    "url": "https://www.shft.group"
 }

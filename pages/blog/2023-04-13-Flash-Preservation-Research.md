@@ -12,10 +12,11 @@ tags: posts
 During my time with the SHFT group I’ve been investigating the effects of the deprecation of Adobe Flash in 2020, and what implications it had on the preservation community. The project stemmed from my teammates work on the [ETC Data Analysis] project which analyzed 18TB of interactive art projects from 2000-2021 provided by Carnage Mellon University’s Entertainment Technology master program.
 
 <div style="text-align: center">
-    <img src="/assets/images/blog/flash_project_graph.png" style="text-align: center; height: 205.00px; width:558.00px;"/>
+    <figure class="figure">
+    <img style="text-align: center" src="/assets/images/blog/flash_project_graph.png" alt="A visualization of the number of Flash projects (green, blue, and yellow) in the ETC dataset from 2004-2018" class="img-fluid figure-img rounded">
+        <figcaption class="figure-caption">A visualization of the number of Flash projects (green, blue, and yellow) in the ETC dataset from 2004-2018</figcaption>
+    </figure>
 </div>
-
-A visualization of the number of Flash projects (green, blue, and yellow) in the ETC dataset from 2004 - 2018.
 
 Upon my teammates analysis of the data, we found that at least 70 projects (16%) were made with Adobe Flash. This meant that a significant number of files were inaccessible to us for our research and analysis. This sparked my investigation into the online preservation efforts of Adobe Flash and what the active community is doing to try to preserve its access.
 

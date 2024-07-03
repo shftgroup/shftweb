@@ -11449,8 +11449,7 @@ header .navbar-nav a {
 }
 
 .project_card {
-  max-width: 300px;
-  border: none;
+  border: white;
 }
 
 .pager a {

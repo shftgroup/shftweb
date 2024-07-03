@@ -4,7 +4,10 @@
   "description": "This repository contains the source code for the Software History Futures and Technologies (SHFT) Group's website available at: https://shft.group",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass scss/main.scss:css/styles.css --watch",
+    "start": "npm run watch:eleventy & npm run watch:sass"
   },
   "keywords": [],
   "author": "",

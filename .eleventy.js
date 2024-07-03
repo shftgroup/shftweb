@@ -4,8 +4,11 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 module.exports = function(eleventyConfig) {
     // Explicitly sets the default for dynamic partials, this just means that Liquid Templates need
     // to reference quoted paths for templates
+	eleventyConfig.setBrowserSyncConfig({
+		files: './_site/css/*.css'
+	});
     eleventyConfig.setLiquidOptions({
-	dynamicPartials: true
+		dynamicPartials: true
     });
 
     // Enable date time filtering

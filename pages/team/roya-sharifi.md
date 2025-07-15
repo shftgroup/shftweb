@@ -9,10 +9,10 @@ twitter:
 github: 
 scholar:
 image: /assets/images/team/roya-sharifi.jpeg 
-alum: false
+alum: true 
 cv:
 orcid: 
 tags: team
 ---
-She is a Master's student in the Digital Humanities program at the University of Alberta. Her academic journey is driven by a keen interest in the intersection of technology and the humanities, with a particular focus on project management within Digital Humanities, video games, libraries, and documentation. Currently, she is collaborating as a Research Assistant on the GAMECIP project vocabularies, which allows her to explore the preservation and cataloging of vocabularies of video games.
+She completed her Master's in the Digital Humanities program at the University of Alberta. Her academic journey is driven by a keen interest in the intersection of technology and the humanities, with a particular focus on project management within Digital Humanities, video games, libraries, and documentation. She collaborated as a Research Assistant on the GAMECIP project vocabularies, which allowed her to explore the preservation and cataloging of vocabularies of video games.
 

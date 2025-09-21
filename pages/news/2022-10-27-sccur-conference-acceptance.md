@@ -12,4 +12,4 @@ SHFT associates [Desireé Caldera], [Adam Larson] and [Morgan McMurray] will be 
 [Adam Larson]: /pages/team/adam-larson
 [Morgan McMurray]: /pages/team/morgan-mcmurray
 [Desireé Caldera]: /pages/team/desiree-caldera
-[Matilda Orona]: /pages/team/2022-04-13-matilda-orona
+[Matilda Orona]: /pages/team/matilda-orona

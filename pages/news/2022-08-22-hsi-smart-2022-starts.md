@@ -15,4 +15,4 @@ SHFT projects, including project file visualization, flash preservation, and per
 archiving. 
 
 [Adam Larson]: /pages/team/adam-larson
-[Matilda Orona]: /pages/team/2022-04-13-matilda-orona
+[Matilda Orona]: /pages/team/matilda-orona

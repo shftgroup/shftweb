@@ -17,4 +17,4 @@ did not get accepted, its reviews were all positive, and SHFT is working on furt
 different venue. 
 
 [Adam Larson]: /pages/team/adam-larson
-[Matilda Orona]: /pages/team/2022-04-13-matilda-orona
+[Matilda Orona]: /pages/team/matilda-orona

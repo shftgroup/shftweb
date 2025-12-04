@@ -7,8 +7,8 @@ nickname: Donavon
 email: 
 github: 
 image: 
-alum: false
-tags: team
+alum: true
+tags: [team]
 ---
 
 Donavon Hee is an undergraduate research assistant helping the SHFT group with an online gallery of GISST examples.

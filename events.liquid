@@ -1,0 +1,71 @@
+---
+layout: default
+title: "Events"
+description: "SHFT Lab Events"
+eleventyNavigation:
+    key: "Events"
+    order: 4
+---
+<div class="row">
+    <div class="cols">
+        <h2>Upcoming Events</h2>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for event in collections.events %}
+        {% if event.data.status == "upcoming" %}
+    <div class="col">
+        <div class="card project_card">
+            {% if event.data.image %}
+                <a href="{{ event.url }}"><img class="card-img-top" src="{{ event.data.image }}" alt="{{ event.data.image_alt }}"></a>
+            {% endif %}
+            <div class="card-body bg-dark">
+                <h5 class="card-title text-white">
+                    <a class="off" href="{{ event.url }}">{{ event.data.title }}</a>
+                </h5>
+                <div class="smallnote text-white">
+                    {{ event.data.event_date | date_to_string }}
+                    {% if event.data.location %}
+                        | {{ event.data.location }}
+                    {% endif %}
+                </div>
+                <p class="card-text text-white">{{ event.data.summary_text }}</p>
+            </div>
+        </div>
+    </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Past Events</h2>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for event in collections.events %}
+        {% if event.data.status == "past" %}
+            <div class="col">
+                <div class="card project_card">
+                    {% if event.data.image %}
+                        <a href="{{ event.url }}"><img class="card-img-top" src="{{ event.data.image }}" alt="{{ event.data.image_alt }}"></a>
+                    {% endif %}
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title">
+                            <a class="off" href="{{ event.url }}">{{ event.data.title }}</a>
+                        </h5>
+                        <div class="smallnote">
+                            {{ event.data.event_date | date_to_string }}
+                            {% if event.data.location %}
+                                | {{ event.data.location }}
+                            {% endif %}
+                        </div>
+                        <p class="card-text">{{ event.data.summary_text }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

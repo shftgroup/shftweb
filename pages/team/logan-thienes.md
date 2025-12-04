@@ -1,7 +1,7 @@
 ---
 layout: member
 title: "Logan Thienes"
-position: Research Assistant
+position: Graduate Research Assistant
 handle: logan
 nickname: Logan
 email: thienes@ualberta.ca 

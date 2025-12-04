@@ -1,0 +1,164 @@
+---
+layout: default
+---
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div>
+            {%  if image %}
+            <img class="float-start pad-right publication_large_image" src="{{ image }}"/>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="titlebox">
+            <div class="title">
+                {{ title }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="bigspacer"></div>
+        {% if event_date %}
+        <div class="note">
+            <div class="smallhead subtle">
+                Date{% if event_end_date %}s{% endif %}
+            </div>
+            <div class="pad-left note">
+                {{ event_date | date_to_string }}
+                {% if event_end_date %}
+                <br>to<br>{{ event_end_date | date_to_string }}
+                {% endif %}
+            </div>
+            <div class="bigspacer"></div>
+        </div>
+        {% endif %}
+        {% if location %}
+        <div class="note">
+            <div class="smallhead subtle">
+                Location
+            </div>
+            <div class="pad-left note">
+                {{ location }}
+            </div>
+            <div class="bigspacer"></div>
+        </div>
+        {% endif %}
+        {% if website %}
+        <div class="note">
+            <div class="smallhead subtle">
+                Website
+            </div>
+            <div class="pad-left note">
+                <a class="off" href="{{ website }}">Link</a>
+            </div>
+            <div class="bigspacer"></div>
+        </div>
+        {% endif %}
+        {% if organizers %}
+        <div class="note">
+            <div class="smallhead subtle">
+                Organizers
+            </div>
+            <div class="pad-left note">
+                {{ organizers }}
+            </div>
+            <div class="bigspacer"></div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-md-8">
+        <!-- Overview Section -->
+        <div class="post">
+            <h3>Overview</h3>
+            {{ content }}
+        </div>
+
+        <!-- Timeline Section -->
+        {% if timeline %}
+        <div class="bigspacer"></div>
+        <div class="post">
+            <h3>Event Timeline</h3>
+            <div class="timeline">
+                {% assign current_day = "" %}
+                {% for item in timeline %}
+                    {% if item.day and item.day != current_day %}
+                        {% assign current_day = item.day %}
+                        <div class="timeline-day-header">
+                            <h4>{{ item.day }}</h4>
+                            {% if item.day_date %}
+                            <div class="smallnote">{{ item.day_date | date_to_string }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="smallspacer"></div>
+                    {% endif %}
+                    <div class="timeline-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="smallhead">
+                                    {{ item.time }}
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="note">
+                                    <h4>{{ item.title }}</h4>
+                                    {% if item.description %}
+                                    <p>{{ item.description }}</p>
+                                    {% endif %}
+                                    {% if item.speakers %}
+                                    <div class="smallnote"><em>Speakers: {{ item.speakers }}</em></div>
+                                    {% elsif item.speaker %}
+                                    <div class="smallnote"><em>Speaker: {{ item.speaker }}</em></div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="smallspacer"></div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Attendees Section -->
+        {% if attendees %}
+        <div class="bigspacer"></div>
+        <div class="post">
+            <h3>Attendees</h3>
+            {% if attendees_note %}
+            <div class="note">
+                {{ attendees_note }}
+            </div>
+            {% endif %}
+            <div class="attendees-list">
+                <ul>
+                {% for attendee in attendees %}
+                    <li>
+                        {% if attendee.url %}
+                            <a class="off" href="{{ attendee.url }}">{{ attendee.name }}</a>
+                        {% else %}
+                            {{ attendee.name }}
+                        {% endif %}
+                        {% if attendee.affiliation %}
+                            <span class="smallnote"> - {{ attendee.affiliation }}</span>
+                        {% endif %}
+                        {% if attendee.role %}
+                            <span class="smallnote"> ({{ attendee.role }})</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="hugespacer"></div>

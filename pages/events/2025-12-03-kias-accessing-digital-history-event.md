@@ -114,10 +114,10 @@ attendees:
     affiliation: "OCAD University"
   - name: "Dr. Gabriela Aceves Sepulveda"
     affiliation: "Simon Fraser University - Critical Media Arts Studio (cMAS)"
-  - name: "PB Berge"
+  - name: "Dr. PB Berge"
     affiliation: "University of Alberta - Media and Technology Studies - CRYPT Lab"
-  - name: "Bita Amani"
-    affiliation: "Queen's University Law"
+  - name: "Dr. Bita Amani"
+    affiliation: "Queen's University Law - Co-Director of Feminist Legal Studies"
 ---
 
 This two-day workshop brings together Canadian and international researchers, archivists, librarians, and digital 

@@ -117,7 +117,7 @@ attendees:
   - name: "Dr. PB Berge"
     affiliation: "University of Alberta - Media and Technology Studies - CRYPT Lab"
   - name: "Dr. Bita Amani"
-    affiliation: "Queen's University Law - Co-Director of Feminist Legal Studies"
+    affiliation: "Queen's University Law - Co-Director of Feminist Legal Studies Queen's Association"
 ---
 
 This two-day workshop brings together Canadian and international researchers, archivists, librarians, and digital 

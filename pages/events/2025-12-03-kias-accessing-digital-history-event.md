@@ -1,8 +1,8 @@
 ---
 layout: event
 date: 2025-12-03
-event_date: 2025-12-13
-event_end_date: 2025-12-14
+event_date: 2025-12-12
+event_end_date: 2025-12-13
 title: "Accessing the History of Digital Media: Towards a Canadian Framework for the Recovery of Software-based Works"
 summary_text: "Funded by the Kule Institute for Advanced Study at UAlberta, this workshop will focus on the issues and challenges surrounding the creation of Canadian national infrastructure to preserve digital media works."
 status: upcoming
@@ -13,7 +13,7 @@ image_alt: "KIAS Institute Logo"
 tags: [events]
 timeline:
   - day: "Day 1: Alignment and Sharing"
-    day_date: 2025-12-13
+    day_date: 2025-12-12
     time: "8:00 AM - 9:00 AM"
     title: "Breakfast"
     description: "<a href='https://www.banffcentre.ca/vistas-dining-room'>Vistas Dining Hall</a>"
@@ -56,7 +56,7 @@ timeline:
     title: "Group Dinner (Optional)"
     description: "Participant dinner in downtown Banff, location TBD"
   - day: "Day 2: Workshop"
-    day_date: 2025-12-14
+    day_date: 2025-12-13
     time: "8:00 AM - 9:00 AM"
     title: "Breakfast"
     description: "Morning breakfast at Vistas Dining Hall"

@@ -21,7 +21,7 @@ timeline:
     time: "9:00 AM - 10:45 AM"
     title: "Session 1: Centering and Introduction"
     description: "Introductory presentations from all participants on their work and how it relates to the proposal"
-    speakers: "Eric Kaltman (CSUCI), Susan Lord/Jen Kennedy/Jeremy Heil (Queen's University - Vulnerable Media, ELMA), Jennifer Smith (NIMAC), Mikhel Proulx (IDAA/CyberPowWow), Sean Luyk (UAlberta Library), Angela Joosse (CRKN), Chelle Sanders (SPN), Wendy Hagenmaier (EAASI), Sara Diamond (OCADU), PB Berge (UofA)"
+    speakers: "Eric Kaltman (UAlberta), Susan Lord/Jen Kennedy/Jeremy Heil (Queen's University - Vulnerable Media, ELMA), Jennifer Smith (NIMAC), Mikhel Proulx (IDAA/CyberPowWow), Sean Luyk (UAlberta Library), Angela Joosse (CRKN), Chelle Sanders (SPN), Wendy Hagenmaier (EAASI), Sara Diamond (OCADU), PB Berge (UofA)"
   - day: "Day 1: Alignment and Sharing"
     time: "10:45 AM - 11:00 AM"
     title: "Coffee Break at MacLab Bistro"

@@ -43,7 +43,7 @@ timeline:
     time: "2:15 PM - 3:15 PM"
     title: "Session 4: Canadian Legal Contexts"
     description: "Presentation and discussion on Canadian legal context, including copyright, policy, and alignment with best practices from US contexts"
-    speakers: "Bita Amani"
+    speakers: "Bita Amani, Mark Swartz"
   - day: "Day 1: Alignment and Sharing"
     time: "3:15 PM - 3:30 PM"
     title: "Break"
@@ -116,6 +116,8 @@ attendees:
     affiliation: "University of Alberta - Media and Technology Studies - CRYPT Lab"
   - name: "Dr. Bita Amani"
     affiliation: "Queen's University Law - Co-Director of Feminist Legal Studies Queen's Association"
+  - name: "Mark Swartz"
+    affiliation: "Queen's University Library - Scholarly Publishing Librarian"
 ---
 
 This two-day workshop brings together Canadian and international researchers, archivists, librarians, and digital 

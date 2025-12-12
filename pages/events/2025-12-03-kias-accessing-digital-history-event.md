@@ -43,7 +43,7 @@ timeline:
     time: "2:15 PM - 3:15 PM"
     title: "Session 4: Canadian Legal Contexts"
     description: "Presentation and discussion on Canadian legal context, including copyright, policy, and alignment with best practices from US contexts"
-    speakers: "Bita Amani, Mark Swartz"
+    speakers: "Bita Amani, Mark Swartz, Graeme Slaght"
   - day: "Day 1: Alignment and Sharing"
     time: "3:15 PM - 3:30 PM"
     title: "Break"
@@ -118,6 +118,8 @@ attendees:
     affiliation: "Queen's University Law - Co-Director of Feminist Legal Studies Queen's Association"
   - name: "Mark Swartz"
     affiliation: "Queen's University Library - Scholarly Publishing Librarian"
+  - name: "Graeme Slaght"
+    affiliation: "University of Toronto Libraries - Acting Head - Scholarly Communications & Copyright Office"
 ---
 
 This two-day workshop brings together Canadian and international researchers, archivists, librarians, and digital 
@@ -131,8 +133,8 @@ The workshop is structured around key themes essential to building sustainable p
 **Day 1: Alignment and Sharing** provides a foundation for collaboration through introductions from participating institutions 
 and projects, including National Indigenous Media Arts Coalition (NIMAC), Canadian Research Knowledge Network (CRKN), 
 the Software Preservation Network, OCADU's Inclusive Design Research Centre, UAlberta's Software 
-History Futures and Technologies (SHFT) Group and Critical Research Yielding Playful Technologies (CRYPT), 
-Queen's University's Vulnerable Media Lab. Participants will explore current preservation technologies like GISST and 
+History Futures and Technologies (SHFT) Group and Critical Research Yielding Playful Technologies (CRYPT), Queen's University Library,
+Queen's University's Vulnerable Media Lab, UAlberta Library, and the University of Toronto Libraries. Participants will explore current preservation technologies like GISST and 
 EAASI, discuss Canadian cultural contexts and networks of care, and examine the legal landscape specific to Canadian 
 copyright and cultural policy.
 

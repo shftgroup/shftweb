@@ -13,7 +13,7 @@ eleventyNavigation:
     {% for project in collections.projects %}
         {% if project.data.active %}
     <div class="col">
-        <div class="card project_card">
+        <div class="card project_card text-white">
             <a href="{{ project.url }}"><img class="card-img-top" src="{{ project.data.image }}" alt="{{ project.data.image_alt }}"></a>
             <div class="card-body bg-dark">
                 <h5 class="card-title">
@@ -36,7 +36,7 @@ eleventyNavigation:
     {% for project in collections.projects %}
         {% if project.data.active != true %}
             <div class="col">
-                <div class="card project_card">
+                <div class="card project_card text-white">
                     <a href="{{ project.url }}"><img class="card-img-top" src="{{ project.data.image }}" alt="{{ project.data.image_alt }}"></a>
                     <div class="card-body bg-dark">
                         <h5 class="card-title">

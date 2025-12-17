@@ -5,7 +5,7 @@ event_date: 2025-12-12
 event_end_date: 2025-12-13
 title: "Accessing the History of Digital Media: Towards a Canadian Framework for the Recovery of Software-based Works"
 summary_text: "Funded by the Kule Institute for Advanced Study at UAlberta, this workshop will focus on the issues and challenges surrounding the creation of Canadian national infrastructure to preserve digital media works."
-status: upcoming
+status: past
 location: "Banff Centre for the Arts and Creativity, Banff, Alberta"
 organizers: "Dr. Eric Kaltman, Dr. Susan Lord, Dr. Jen Kennedy"
 image: /assets/images/events/KIAS-logo.png

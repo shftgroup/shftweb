@@ -10,7 +10,7 @@ eleventyNavigation:
     </div>
 </div>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-    {% for project in collections.projects %}
+    {% for project in collections.projects reversed %}
         {% if project.data.active %}
     <div class="col">
         <div class="card project_card text-white">
